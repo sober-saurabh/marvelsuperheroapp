@@ -1,0 +1,270 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1c1c1c, #6874389e);
+    overflow-x: hidden;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5) !important;
+    padding: 0.25rem 1rem;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; 
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .navbar-logo {
+    width: 100px;
+    height: auto;
+    max-height: 48px;
+    transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease; 
+    margin-top: -10px;
+  }
+  
+  .navbar-logo:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+    filter: brightness(5);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  .nav-item-1 {
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+    border-radius: 7px;
+    background-color: rgb(236, 245, 250);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item-1 :hover{
+    color: whitesmoke;
+    background-color: #7A9E9F;
+    border-radius: 7px;
+    transition: 0.05s ease-in-out;
+  }
+
+  
+  #navbar-logo:active {
+    transform: scale(0.8); /* Click effect */
+  }
+  
+  
+  #app-name{
+    color:rgb(68, 75, 33);
+    margin-top: 10px;
+    margin-left: 1%;
+    letter-spacing: 2.5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 1000;
+  }
+
+
+  .track-name-display {
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+
+
+/* Styling for the heading */
+h1 {
+  font-size: 2.5rem; /* Larger font size */
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  text-align: center;
+  color: #13303E; /* Fallback color for unsupported browsers */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  letter-spacing: 2px; /* Adds spacing between letters */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient effect */
+  -webkit-background-clip: text; /* WebKit-specific gradient clipping */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* Makes the gradient visible */
+}
+
+
+  /* Character Cards */
+  .characters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+/* Character Card */
+.character-card {
+  background-color: #8d9da8;
+  border-radius: 10px;
+  margin: 1rem;
+  width: 220px; /* Keep the width unchanged */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto; /* Adjusted height (reduced by 10% from 300px) */
+}
+  
+  
+  .character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .character-card img {
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 30px 0px #8fcb4e;
+  }
+
+  .character-card img:hover{
+    box-shadow: 0px 3px 25px 3px #6c5747;
+    transition: ease-in-out 0.2s;
+  }
+  
+  .character-name {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .remove-fav-btn, .know-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 5px;
+  }
+  
+  .remove-fav-btn:hover {
+    background-color: #d43f3f;
+    transition: ease-in-out 0.2s;
+  }
+  
+  .know-more-btn:hover {
+    background-color: #8fcb4e;
+    color:black;
+    transition: ease-in-out 0.2s;
+  }
+  
+
+/* Notification Styling */
+.notification {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  background-color: #ff4c4c; /* Default for removal */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-10px); /* Slightly out of view */
+  animation: fadeInOutSmooth 6s ease-in-out forwards;
+}
+
+/* Restored notification styling */
+.notification.restored {
+  background-color: #28a745 !important; /* Green for restored notification */
+  color: white !important; /* Ensure the text color stays consistent */
+}
+
+/* Undo button */
+.undo-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.undo-btn i {
+  margin-right: 5px; /* Space before the Undo text */
+}
+
+.undo-btn:hover {
+  color: #ffe6e6;
+}
+
+/* Smooth fade-in and fade-out animation */
+@keyframes fadeInOutSmooth {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  15% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  85% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+}
+
+
+
+/* Hide App name dynamically for smaller screens */
+
+@media (max-width: 998px) { 
+  .track-name-display {
+      display:inline; /* Hide song name */
+      left: 54% !important;
+      /* margin-top: -15px !important; */
+  }
+
+  #app-name{
+    display: none; 
+    margin-top: 15px;
+  }
+
+  .navbar-logo{
+    margin-right: 0;
+    margin-top: -7px !important;
+  }
+
+} 

@@ -2,6 +2,8 @@
 
 Netlify Host-Link:  https://marvel-superhero.netlify.app/
 
+YouTube Explanation Link:  https://www.youtube.com/watch?v=rxC706TGo60&t=219s
+
 The Marvel Superhero Explorer project is a dynamic and interactive web application designed to provide users with an engaging way to search for Marvel superheroes, view detailed information, and manage a personalized favorites list. At its core, the project utilizes HTML, CSS, JavaScript, and the Marvel API to fetch and display superhero data dynamically. The journey began with implementing a robust search functionality that allowed users to type superhero names and fetch relevant results from the Marvel API in real time. Challenges like handling missing data and API errors were addressed by incorporating fallback mechanisms and sanitizing the data to ensure a seamless experience.
 
 The character details page presented an opportunity to delve deeper into the specifics of each superhero. Information such as their description, comics, series, and stories was displayed in a visually appealing layout with animations. A persistent issue of broken resource links was resolved by ensuring authenticated links were passed from the main page, eliminating the need for additional API calls on the details page.
